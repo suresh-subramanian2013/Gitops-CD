@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tasl-prod
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: tasl-prod
