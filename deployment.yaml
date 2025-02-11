@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydeploy2
+  name: tasl-prod
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: mydeploy2
+      name: tasl-prod
   template:
     metadata:
       name: mypod1
       labels:
-        name: mydeploy2
+        name: tasl-prod
     spec:
       containers:
       - name: mycontainer
@@ -28,7 +28,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    name: mydeploy2
+    name: tasl-prod
   ports:
     - port: 80
       targetPort: 8080
